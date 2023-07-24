@@ -1,0 +1,7 @@
+{
+  "name": "cyeco-web-app",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "vue-vite"
+}
