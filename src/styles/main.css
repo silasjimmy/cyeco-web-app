@@ -1,0 +1,10 @@
+.b {
+    border: 1px solid black;
+}
+
+.v-align-content {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+}
