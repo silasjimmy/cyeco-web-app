@@ -7,13 +7,12 @@ import PhoneNumber from "../views/auth/PhoneNumber.vue";
 import VerifyNumber from "../views/auth/VerifyNumber.vue";
 import UserInfo from "../views/auth/UserInfo.vue";
 
+// Dashboard views
+import Dashboard from "../views/dashboard/Dashboard.vue";
+
 const routes = [
   {
     path: '/',
-    redirect: '/home'
-  },
-  {
-    path: '/home',
     name: 'home',
     component: Home
   },
@@ -36,7 +35,29 @@ const routes = [
     path: '/user-info',
     name: 'user-info',
     component: UserInfo
-  }
+  },
+  {
+    path: '/dashboard',
+    redirect: '/dashboard/home'
+  },
+  {
+    path: '/dashboard',
+    component: Dashboard,
+    children: [
+      {
+        path: "home",
+        component: () => import('../views/dashboard/Navigation.vue'),
+      },
+      {
+        path: "docks",
+        component: () => import('../views/dashboard/Docks.vue'),
+      },
+      {
+        path: "account",
+        component: () => import('../views/dashboard/Account.vue'),
+      },
+    ],
+  },
 ]
 
 const router = createRouter({
