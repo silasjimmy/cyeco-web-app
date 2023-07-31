@@ -7,7 +7,7 @@
             <h1>Cyeco</h1>
           </ion-col>
           <ion-col size="12">
-            <h1>Logo</h1>
+            <img src="../../assets/cyeco-logo.jpg" alt="Cyeco logo" />
           </ion-col>
           <ion-col size="12">
             <h1>Buttons</h1>
@@ -22,12 +22,12 @@
 </template>
 
 <script>
-import { IonContent, IonPage, IonGrid, IonRow, IonCol } from '@ionic/vue';
+import { IonContent, IonPage, IonGrid, IonRow, IonCol, IonImg } from '@ionic/vue';
 
 export default {
   name: "Home",
   components: {
-    IonContent, IonPage, IonGrid, IonRow, IonCol
+    IonContent, IonPage, IonGrid, IonRow, IonCol, IonImg
   }
 }
 </script>
